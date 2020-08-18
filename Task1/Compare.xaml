@@ -1,0 +1,108 @@
+﻿<Window x:Class="Task1.Compare"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task1"
+        mc:Ignorable="d"
+        Title="Алгоритмы НОД" Height="500" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#DDA0DD">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <TextBlock FontWeight="Bold" FontSize="25" Foreground="AliceBlue" VerticalAlignment="Center" Margin="5 5" HorizontalAlignment="Center" Text="  Алгоритм Евклида  "/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock FontSize="15" Foreground="AliceBlue" VerticalAlignment="Center" Background="#EE82EE" Margin="5 5" HorizontalAlignment="Center" Text="  Первое число  "/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TextBox Name="OneE" Margin="10" />
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock FontSize="15" Foreground="AliceBlue" VerticalAlignment="Center" Background="#EE82EE" Margin="5 5" HorizontalAlignment="Center" Text="  Второе число  "/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TextBox Name="TwoE" Margin="10" />
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <TextBlock FontWeight="Bold" FontSize="25" Foreground="AliceBlue" VerticalAlignment="Center" Margin="5 5" HorizontalAlignment="Center" Text="  Алгоритм Стейна  "/>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock FontSize="15" Foreground="AliceBlue" VerticalAlignment="Center" Background="#EE82EE" Margin="5 5" HorizontalAlignment="Center" Text="  Первое число  "/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TextBox Name="OneS" Margin="10" />
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock FontSize="15" Foreground="AliceBlue" VerticalAlignment="Center" Background="#EE82EE" Margin="5 5" HorizontalAlignment="Center" Text="  Второе число  "/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TextBox Name="TwoS" Margin="10" />
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="4">
+            <Button FontWeight="Bold" Margin="100 25" FontSize="20" Foreground="AliceBlue" BorderThickness="3" BorderBrush="#FF69B4" Background="#EE82EE" Click="DoCompare">Сравнить</Button>
+        </Grid>
+
+        <Grid Grid.Row="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <TextBlock Name="ResultEuclidean" FontWeight="Bold" FontSize="25" Foreground="AliceBlue" VerticalAlignment="Center" Margin="5 5" HorizontalAlignment="Center" Text="    "/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <TextBlock Name="ResultStein" FontWeight="Bold" FontSize="25" Foreground="AliceBlue" VerticalAlignment="Center" Margin="5 5" HorizontalAlignment="Center" Text="    "/>
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</Window>
